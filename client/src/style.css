@@ -1,0 +1,127 @@
+.navbar{
+    background-color: rgb(231, 230, 230);
+
+}
+body{
+    background-color: whitesmoke;
+}
+.main{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: white;
+
+}
+.title{
+    font-size: 35px;
+}
+.button{
+    color: black;
+    background-color: #a3a4a7 ;
+    border-color: #a3a4a7 ;
+    border-radius: 20px;
+    padding: 10px;
+}
+.buttonCreate{
+    color: black;
+    background-color: #a3a4a7 ;
+    border-color: #a3a4a7 ;
+    border-radius: 10px !important;
+
+}
+#createbtn{
+    float: right;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 30px;
+    margin-right: 20px;
+    background-color: #a3a4a7 !important;
+    border-color: #a3a4a7 !important;
+
+}
+.card{
+    background-color: white;
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+
+}
+.maker{
+    width: 33.33%;
+}
+.logincard {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    padding: 20px;
+    transform: translate(-50%, -50%) 
+}
+.btndiv{
+    display: flex;
+    align-items: center;
+}
+.calendar{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(231, 230, 230);
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+}
+.loginPg{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.btns{
+    position: relative;
+    left: 40%;
+    margin-right: -40%;
+    
+}
+.eventType1btn {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: 20px;
+}
+.eventType2btn {
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-left: 20px;
+
+}
+.Logoutbtn {
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 30px;
+    background-color: #a3a4a7;
+    border-color: #a3a4a7;
+    width: 120px;
+    margin: 5px;
+
+}
+.Loginbtn {
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 30px;
+    background-color: #a3a4a7;
+    border-color: #a3a4a7;
+    width: 120px;
+    margin: 5px;
+
+}
