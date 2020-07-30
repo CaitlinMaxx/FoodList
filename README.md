@@ -1,12 +1,12 @@
-#Food List
+# Food List
 
 This app is a MERN search engine that allows the user to search through a database of "Safe Foods". There are two search options, search by food name and search by meal type. It makes use of Bootstrap.
 
-##User Story
+## User Story
 
 I made this app as someone with an eating disorder, which make eating a source of anxiety. The worse my mental state, the harder it is to deal with that anxiety. One of the things that helps is having a physical list of the foods that are my "safe foods". This app allow me to search through said list for what I need.
 
-##Future Development
+## Future Development
 
 There are a bunch of things that I intend to do to better and expand this app:
 
