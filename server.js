@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "heroku_x1t48mvx",
+  process.env.MONGODB_URI || "mongodb://localhost/FoodList",
   { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
 );
 
