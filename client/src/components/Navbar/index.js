@@ -1,14 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { GoogleLogout } from 'react-google-login';
-import { useGoogleLogin } from 'react-google-login';
-
-
-
-const logoutGoogle = (response) => {
-  console.log(response);
-  console.log("logged out")
-}
 
 
 // Depending on the current path, this component sets the "active" className on the appropriate navigation link item
@@ -16,21 +7,24 @@ function Navbar() {
 
 
   return (
-    <nav className="navbar navbar-light">
-      <Link className="navbar-brand title" to="/">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <Link className="navbar-brand title mb-0 h1" to="/Home">
         Food List
       </Link>
-      <div>
-      <GoogleLogout 
-        className="Logoutbtn"
-        clientId="1051194441048-4vdhlle1jsqg6jcfes3jgof8uo1sa2rn.apps.googleusercontent.com"
-        render={renderProps => (
-          <button className="button btn Loginbtn" onClick={renderProps.onClick} disabled={renderProps.disabled}>Logout</button>
-        )}
-        buttonText="Logout"
-        onlogoutSuccess={logoutGoogle}
-      />
-      {document.getElementById('googleButton')}
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" idName="navbarNav">
+        <ul className="navbar-nav">
+        <li className="nav-item">
+            <Link
+              to="/Search"
+              className={window.location.pathname === "/Search" ? "nav-link active" : "nav-link"}
+            >
+              Search for Food
+            </Link>
+          </li>
+        </ul>
       </div>
     </nav>
   );

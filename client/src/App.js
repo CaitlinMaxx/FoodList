@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./pages/Home.js";
-import Login from "./pages/Login.js";
-import SearchPage from "./pages/SearchPage.js";
+import SearchFoodPage from "./pages/SearchFoodPage.js";
+import SearchMealPage from "./pages/SearchMealPage.js";
+import Search from "./pages/Search.js";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
@@ -16,10 +16,10 @@ function App() {
         <div>
           <Navbar />
           <Wrapper>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/searchPage" component={SearchPage} />
+            <Route exact path="/" component={Search} />
+            <Route exact path="/Search" component={Search} />
+            <Route exact path="/SearchFoodPage" component={SearchFoodPage} />
+            <Route exact path="/SearchMealPage" component={SearchMealPage} />
           </Wrapper>
           <Footer />
         </div>

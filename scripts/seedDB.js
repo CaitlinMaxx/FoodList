@@ -4,7 +4,7 @@ const db = require("../models");
 // This file empties the Books collection and inserts the books below
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactrecipes"
+  process.env.MONGODB_URI || "mongodb://localhost/FoodList"
 );
 
 const foodSeed = [
@@ -14,10 +14,10 @@ const foodSeed = [
     foodGroup: [
       "Grains/Carbs"
     ],
-    cooked: false,
+    cooked: "no",
     ingredients: [
-      "cereal",
-      "milk",
+      "cereal ",
+      "milk ",
       
     ]
   },
@@ -25,397 +25,397 @@ const foodSeed = [
     name: "Fruit Pouch",
     mealType: "Snack",
     foodGroup: [
-      "Fruit"
+      "Fruit "
     ],
-    cooked: false,
+    cooked: "no",
     ingredients: [
-      "fruit pouch"
+      "fruit pouch "
     ]
   },
   {
     name: "Nuts",
     mealType: "Snack",
     foodGroup: [
-      "Protein"
+      "Protein "
     ],
-    cooked: false,
+    cooked: "no",
     ingredients: [
-      "nuts"
+      "nuts "
     ]
   },
   {
     name: "Stringers",
     mealType: "Snack",
     foodGroup: [
-      "Calcium"
+      "Calcium "
     ],
-    cooked: false,
+    cooked: "no",
     ingredients: [
-      "stringers"
+      "stringers "
     ]
   },
   {
     name: "Cup-A-Soup",
     mealType: "Snack",
     foodGroup: [
-      "Grains/Carbs"
+      "Grains/Carbs "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "cup-a-soup"
+      "cup-a-soup "
     ]
   },
   {
     name: "2 Minute Noodles",
     mealType: "Small Meal",
     foodGroup: [
-      "Grains/Carbs"
+      "Grains/Carbs "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "2 minute noodles"
+      "2 minute noodles "
     ]
   },
   {
     name: "Corn Chips",
     mealType: "Snack",
     foodGroup: [
-      "Grains/Carbs"
+      "Grains/Carbs "
     ],
-    cooked: false,
+    cooked: "no",
     ingredients: [
-      "corn chips"
+      "corn chips "
     ]
   },
   {
     name: "Popcorn",
     mealType: "Snack",
     foodGroup: [
-      "Grains/Carbs"
+      "Grains/Carbs "
     ],
-    cooked: false,
+    cooked: "no",
     ingredients: [
-      "popcorn"
+      "popcorn "
     ]
   },
   {
     name: "Watermelon",
     mealType: "Snack",
     foodGroup: [
-      "Fruit"
+      "Fruit "
     ],
-    cooked: false,
+    cooked: "no",
     ingredients: [
-      "watermelon"
+      "watermelon "
     ]
   },
   {
     name: "Watermelon Slushy",
     mealType: "Snack",
     foodGroup: [
-      "Fruit"
+      "Fruit "
     ],
-    cooked: false,
+    cooked: "no",
     ingredients: [
-      "watermelon",
-      "ice cubes",
-      "lemon sorbet",
-      "water"
+      "watermelon ",
+      "ice cubes ",
+      "lemon sorbet ",
+      "water "
     ]
   },
   {
     name: "Yo-Go's",
     mealType: "Snack",
     foodGroup: [
-      "Calcium"
+      "Calcium "
     ],
-    cooked: false,
+    cooked: "no",
     ingredients: [
-      "yo-go"
+      "yo-go "
     ]
   },
   {
     name: "Frozen Yogurt Paddle-Pop",
     mealType: "Snack",
     foodGroup: [
-      "Calcium"
+      "Calcium "
     ],
-    cooked: false,
+    cooked: "no",
     ingredients: [
-      "frozen yogurt paddle-pop"
+      "frozen yogurt paddle-pop "
     ]
   },
   {
     name: "Lettuce and Cheese Wrap",
     mealType: "Main Meal",
     foodGroup: [
-      "Grains/Carbs",
-      "Vegtable",
-      "Calcium"
+      "Grains/Carbs ",
+      "Vegetable ",
+      "Calcium "
     ],
-    cooked: false,
+    cooked: "no",
     ingredients: [
-      "iceberg lettuce",
-      "wraps x2",
-      "cheese"
+      "iceberg lettuce ",
+      "wraps x2 ",
+      "cheese "
     ]
   },
   {
     name: "Butter and Vegimite Corn Thins",
     mealType: "Snack",
     foodGroup: [
-      "Grains/Carbs"
+      "Grains/Carbs "
     ],
-    cooked: false,
+    cooked: "no",
     ingredients: [
-      "corn thins",
-      "vegimite",
-      "butter"
+      "corn thins ",
+      "vegimite ",
+      "butter "
     ]
   },
   {
     name: "Chicken Noodle Soup",
     mealType: "Main Meal",
     foodGroup: [
-      "Grains/Carbs",
-      "Vegtable",
-      "Protein"
+      "Grains/Carbs ",
+      "Vegetable ",
+      "Protein "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "egg noodles",
-      "chicken stock",
-      "jarred garlic",
-      "jarred ginger",
-      "soy sauce",
-      "sesame oil",
-      "shallots",
-      "baby corn",
-      "chicken"
+      "egg noodles ",
+      "chicken stock ",
+      "jarred garlic ",
+      "jarred ginger ",
+      "soy sauce ",
+      "sesame oil ",
+      "shallots ",
+      "baby corn ",
+      "chicken "
     ]
   },
   {
     name: "Honey Soy Noodles",
     mealType: "Small Meal",
     foodGroup: [
-      "Grains/Carbs"
+      "Grains/Carbs "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "udon noodles",
-      "fresh garlic",
-      "soy sauce",
-      "honey"
+      "udon noodles ",
+      "fresh garlic ",
+      "soy sauce ",
+      "honey "
     ]
   },
   {
     name: "Garlic Bread",
     mealType: "Small Meal",
     foodGroup: [
-      "Grains/Carbs"
+      "Grains/Carbs "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "garlic bread"
+      "garlic bread "
     ]
   },
   {
     name: "Marinater Chicken with Pasta",
     mealType: "Main Meal",
     foodGroup: [
-      "Grains/Carbs",
-      "Protein"
+      "Grains/Carbs ",
+      "Protein "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "chicken(marinated)",
-      "pasta",
+      "chicken(marinated) ",
+      "pasta ",
     ]
   },
   {
     name: "Steak with Pasta",
     mealType: "Main Meal",
     foodGroup: [
-      "Grains/Carbs",
-      "Protein"
+      "Grains/Carbs ",
+      "Protein "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "fillet steak",
-      "pasta",
+      "fillet steak ",
+      "pasta ",
     ]
   },
   {
     name: "Sausages in a Bun",
     mealType: "Main Meal",
     foodGroup: [
-      "Grains/Carbs",
-      "Protein"
+      "Grains/Carbs ",
+      "Protein "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "sausage x2",
-      "bun x2",
+      "sausage x2 ",
+      "bun x2 ",
     ]
   },
   {
     name: "Spaghetti Bolognaise",
     mealType: "Main Meal",
     foodGroup: [
-      "Grains/Carbs",
-      "Protein"
+      "Grains/Carbs ",
+      "Protein "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "spaghetti",
-      "bolognaise sauce"    
+      "spaghetti ",
+      "bolognaise sauce "    
     ]
   },
   {
     name: "Tortellini",
     mealType: "Main Meal",
     foodGroup: [
-      "Grains/Carbs",
-      "Protein"
+      "Grains/Carbs ",
+      "Protein "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "tortellini",
-      "latina sauce"    
+      "tortellini ",
+      "latina sauce "    
     ]
   },
   {
     name: "Mango Chicken Curry",
     mealType: "Main Meal",
     foodGroup: [
-      "Grains/Carbs",
-      "Protein",
+      "Grains/Carbs ",
+      "Protein ",
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "mango chicken",
-      "rice"    
+      "mango chicken ",
+      "rice "    
     ]
   },
   {
     name: "Beef Stir Fry",
     mealType: "Main Meal",
     foodGroup: [
-      "Grains/Carbs",
-      "Protein",
-      "Vegtable"
+      "Grains/Carbs ",
+      "Protein ",
+      "Vegetable "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "beef",
-      "shallots",
-      "brocolini",
-      "baby corn",
-      "carrot",
-      "fresh garlic",
-      "oyster sauce",
-      "rice"    
+      "beef ",
+      "shallots ",
+      "brocolini ",
+      "baby corn ",
+      "carrot ",
+      "fresh garlic ",
+      "oyster sauce ",
+      "rice "    
     ]
   },
   {
     name: "Peas",
     mealType: "Meal Ad-On",
     foodGroup: [
-      "Vegtable"
+      "Vegetable "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "peas"   
+      "peas "   
     ]
   },
   {
     name: "Broccoli",
     mealType: "Meal Ad-On",
     foodGroup: [
-      "Vegtable"
+      "Vegetable "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "broccoli"   
+      "broccoli "   
     ]
   },
   {
     name: "Carrots",
     mealType: "Meal Ad-On",
     foodGroup: [
-      "Vegtable"
+      "Vegetable "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "carrots"   
+      "carrots "   
     ]
   },
   {
     name: "Celery",
     mealType: "Meal Ad-On",
     foodGroup: [
-      "Vegtable"
+      "Vegetable "
     ],
-    cooked: false,
+    cooked: "no",
     ingredients: [
-      "celery"   
+      "celery "   
     ]
   },
   {
     name: "Lettuce",
     mealType: "Meal Ad-On",
     foodGroup: [
-      "Vegtable"
+      "Vegetable "
     ],
-    cooked: false,
+    cooked: "no",
     ingredients: [
-      "lettuce"   
+      "lettuce "   
     ]
   },
   {
     name: "Cucumber",
     mealType: "Meal Ad-On",
     foodGroup: [
-      "Vegtable"
+      "Vegetable "
     ],
-    cooked: false,
+    cooked: "no",
     ingredients: [
-      "cucumber"   
+      "cucumber "   
     ]
   },
   {
     name: "Potato",
     mealType: "Meal Ad-On",
     foodGroup: [
-      "Vegtable"
+      "Vegetable "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "potato"   
+      "potato "   
     ]
   },
   {
     name: "Corn-on-the-Cob",
     mealType: "Meal Ad-On",
     foodGroup: [
-      "Vegtable"
+      "Vegetable "
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "Corn"   
+      "Corn "   
     ]
   },
   {
     name: "Broccolini",
     mealType: "Meal Ad-On",
     foodGroup: [
-      "Vegtable"
+      "Vegetable"
     ],
-    cooked: true,
+    cooked: "yes",
     ingredients: [
-      "broccolini",
-      "fresh garlic",
-      "chili flakes"   
+      "broccolini ",
+      "fresh garlic ",
+      "chili flakes "   
     ]
   },
 ];

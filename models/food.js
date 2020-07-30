@@ -12,7 +12,7 @@ const foodSchema = new mongoose.Schema({
   },
   foodGroup: [String],
   cooked: {
-    type: Boolean,
+    type: String,
   },
   
   ingredients: [String]

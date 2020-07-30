@@ -1,45 +1,65 @@
 import React, { useState } from "react";
-import Input from "../components/Input";
 import Button from "../components/Button";
 import API from "../utils/API";
-import { foodList, foodListItem } from "../components/FoodList";
+import { FoodList, FoodListItem } from "../components/FoodList";
 import { Container, Row, Col } from "../components/Grid";
 
-function SearchPage() {
 
-  const [foods, setfoods] = useState([]);
-  const [foodSearch, setfoodSearch] = useState("");
+
+function SearchMealPage() {
+
+  const [mealType, setmealType] = useState([]);
+  const [mealTypeSearch, setmealTypeSearch] = useState("");
 
   const handleInputChange = event => {
     // Destructure the name and value properties off of event.target
     // Update the appropriate state
     const { value } = event.target;
-    setfoodSearch(value);
+    setmealTypeSearch(value);
   };
 
   const handleFormSubmit = event => {
     // When the form is submitted, prevent its default behavior, get foods update the foods state
     event.preventDefault();
-    API.getFoods(foodSearch)
-      .then(res => setfoods(res.data))
+    API.getMeal(mealTypeSearch)
+      .then(res => setmealType(res.data))
       .catch(err => console.log(err));
   };
 
+  function isCooked() {
+        if (mealType.cooked === "yes") {
+          return(
+            <p>Is this food Cooked: Yes</p>
+          )
+        }
+        else{
+            return(
+            <p>Is this food Cooked: No</p>
+            )
+        }
+      
+
+  }
+  
+
   return (
     <div>
+      
       <Container>
         <Row>
           <Col size="md-12">
             <form>
               <Container>
+                <br />
                 <Row>
                   <Col size="xs-9 sm-10">
-                    <Input
-                      name="foodSearch"
-                      value={foodSearch}
-                      onChange={handleInputChange}
-                      placeholder="Search For a food"
-                    />
+                  <div className="form-group mealinput">
+                    <select className="form-control" id="exampleFormControlSelect1" name="mealTypeSearch" value={mealTypeSearch} onChange={handleInputChange}>
+                      <option>Main Meal</option>
+                      <option>Small Meal</option>
+                      <option>Snack</option>
+                    </select>
+                  </div>
                   </Col>
                   <Col size="xs-3 sm-2">
                     <Button
@@ -56,30 +76,30 @@ function SearchPage() {
           </Col>
         </Row>
         <Row>
-          <Col size="xs-12">
-            {!foods.length ? (
+          <div class="col-xs-12 resultscol">
+            {!mealType.length ? (
               <div></div>
             ) : (
-              <foodList>
-                {foods.map(food => {
+              <FoodList>
+                {mealType.map(food => {
                   return (
-                    <foodListItem
+                    <FoodListItem
                       key={food.name}
                       name={food.name}
                       mealType={food.mealType}
                       foodGroup={food.foodGroup}
-                      cooked={food.cooked}
+                      cooked={isCooked()}
                       ingredients={food.ingredients}
                     />
                   );
                 })}
-              </foodList>
+              </FoodList>
             )}
-          </Col>
+          </div>
         </Row>
       </Container>
     </div>
   );
 }
 
-export default SearchPage;
+export default SearchMealPage;
