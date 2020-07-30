@@ -7,5 +7,6 @@ export default {
   },
   getMeal: function(query) {
     return axios.get("/api/meal", { params: { q: query } });
-  }
+  },
+  
 };

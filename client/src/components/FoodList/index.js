@@ -11,7 +11,7 @@ export function FoodListItem({
   mealType,
   ingredients,
   foodGroup,
-  cooked
+  
 }) {
   return (
     <li className="list-group-item">
@@ -19,7 +19,6 @@ export function FoodListItem({
         <Row>
           <Col size="xs-4 sm-6">
             <h3>{name}</h3>
-            {cooked}
             <p>Meal Type: {mealType}</p>
           </Col>
           <Col size="xs-8 sm-6">

@@ -27,20 +27,7 @@ function SearchFoodPage() {
       .catch(err => console.log(err));
   };
 
-  function isCooked() {
-        if (foods.cooked === "yes") {
-          return(
-            <p>Is this food Cooked: Yes</p>
-          )
-        }
-        else{
-            return(
-            <p>Is this food Cooked: No</p>
-            )
-        }
-      
-
-  }
+  
   
 
   return (
@@ -88,7 +75,6 @@ function SearchFoodPage() {
                       name={food.name}
                       mealType={food.mealType}
                       foodGroup={food.foodGroup}
-                      cooked={isCooked()}
                       ingredients={food.ingredients}
                     />
                   );
