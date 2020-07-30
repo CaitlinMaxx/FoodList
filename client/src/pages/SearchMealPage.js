@@ -9,7 +9,7 @@ import { Container, Row, Col } from "../components/Grid";
 function SearchMealPage() {
 
   const [mealType, setmealType] = useState([]);
-  const [mealTypeSearch, setmealTypeSearch] = useState("");
+  const [mealTypeSearch, setmealTypeSearch] = useState("Main Meal");
 
   const handleInputChange = event => {
     // Destructure the name and value properties off of event.target
